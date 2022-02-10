@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org "><head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/{id}(id=${user.getId()})}" th:object="${user}">
+    <label for="name">NAME</label><input name="name" th:field="*{name}" id = "name"/>
+    <br><br>
+    <label for="surname">SURNAME</label><input name="surname" th:field="*{surname}" id = "surname"/>
+    <br><br>
+    <label for="age">AGE</label><input name="age" th:field="*{age}" id = "age"/>
+    <br><br>
+    <input type="submit" value="ADD">
+</form>
+</body>
+</html>
